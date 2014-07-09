@@ -1,0 +1,3 @@
+Reference Implementation of Minesweeper solving challenge.
+
+Uses dynamic programming, mirror images, locations that cannot contain mines.
