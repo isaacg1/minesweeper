@@ -178,6 +178,7 @@ restart_memo={}
 global restart_max
 restart_max=6
 dimensions, mines, revealed = eval(input())
+start_time=time.clock()
 wins, total_boards, moves, memo = winRate(dimensions, mines, revealed)
 move_points=[(move//dimensions[1],move%dimensions[1]) for move in moves]
-print("Best moves are %s.\n%i wins out of %i boards. Ratio of %f. %i positions searched."%(move_points, wins, total_boards, wins/total_boards, len(memo)))
+print("Best moves are %s.\n%i wins out of %i boards. Ratio of %f. %i positions searched.\n%f seconds taken."%(move_points, wins, total_boards, wins/total_boards, len(memo),time.clock()-start_time))
